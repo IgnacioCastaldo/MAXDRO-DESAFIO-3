@@ -1,0 +1,261 @@
+/* diseño mobile */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@media screen and (max-width:480px) {
+    .gridContainer {
+        background-image: url(/images/madera-fondo-mobile.jpg);
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "logo  logo"
+            "navIzq navDer"
+            "parrafo parrafo"
+            "imagen imagen"
+            "video video"
+            "footer footer";
+    }
+
+    #logo {
+        display: grid;
+        grid-area: logo;
+        justify-items: center;
+        background-color: black;
+    }
+
+    .imagen_logo {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .menu_header {
+        list-style: none;
+    }
+
+    .menu_header li {
+        display: inline-block;
+    }
+
+    .menu_header li a {
+        text-decoration: none;
+        color: red;
+        font-weight: bold;
+    }
+
+    #navIzq {
+        display: grid;
+        justify-items: center;
+        grid-area: navIzq;
+    }
+
+    #navDer {
+        display: grid;
+        justify-items: center;
+        grid-area: navDer;
+    }
+
+    .navegador ul {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .navegador li {
+        display: inline;
+        text-align: center;
+        margin: 0 10px 0 0;
+    }
+
+    .navegador li a {
+        padding: 0px 7px 2px 7px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navegador li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #parrafo {
+        display: grid;
+        justify-items: center;
+        grid-area: parrafo;
+    }
+
+    #imagen {
+        display: grid;
+        justify-items: center;
+        grid-area: imagen;
+    }
+
+    .imagen_parrafo {
+        width: 100%;
+    }
+
+    #video {
+        display: none;
+    }
+
+    #footer {
+        display: grid;
+        justify-items: center;
+        grid-area: footer;
+        background-color: brown;
+        padding: 10px;
+    }
+
+    #footer ul {
+        list-style: none;
+    }
+
+    #footer ul li {
+        display: inline-block;
+        text-align: center;
+    }
+
+    #footer ul li a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+/* diseño desktop */
+@media screen and (min-width:481px) {
+    .gridContainer {
+        background-image: url(/images/madera-fondo.jpg);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "navIzq navIzq logo logo navDer navDer"
+            "parrafo parrafo parrafo imagen imagen imagen"
+            "video video video video video video"
+            "footer footer footer footer footer footer";
+    }
+
+
+    #logo {
+        display: grid;
+        grid-area: logo;
+        justify-items: center;
+
+    }
+
+    .imagen_logo {
+        width: 100%;
+        max-width: 160px;
+    }
+    .transform {
+        transform: translate(50px, 2px);
+    }
+
+    .color_titulo {
+        background-color: #b35900;
+        color: black;
+    }
+
+    .color_fuente {
+        color: whitesmoke;
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .color_fuente:hover {
+        background-color: #b35900;
+        color: black;
+    }
+
+    .navegador ul {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .navegador li {
+        display: inline;
+        text-align: center;
+        margin: 0 10px 0 0;
+    }
+
+    .navegador li a {
+        padding: 0px 7px 2px 7px;
+        color: white;
+        font-size: larger;
+        font-family: fantasy;
+        text-decoration: none;
+    }
+
+    .navegador li a:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+
+    #navIzq {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: navIzq;
+    }
+
+    #navDer {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: navDer;
+    }
+
+    #parrafo {
+        display: grid;
+        justify-items: center;
+        grid-area: parrafo;
+    }
+
+    .boton_blanco {
+        color: #000;
+        background-color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 16px;
+        font-size: 15px;
+    }
+
+    #imagen {
+        display: grid;
+        justify-items: center;
+        grid-area: imagen;
+    }
+
+    .imagen_parrafo {
+        width: 100%;
+    }
+
+    #video {
+        display: grid;
+        grid-area: video;
+    }
+
+    #footer {
+        display: grid;
+        justify-items: center;
+        grid-area: footer;
+        background-color: rgb(233, 217, 0);
+        padding: 10px;
+    }
+
+    #footer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer ul li {
+        margin: 10px;
+    }
+
+    #footer ul li a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+}
