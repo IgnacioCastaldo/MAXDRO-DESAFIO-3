@@ -146,13 +146,46 @@
         width: 100%;
         max-width: 160px;
     }
-    .transform {
-        transform: translate(50px, 2px);
+
+    @keyframes un_efecto {
+        0% {width: 100px;}
+        25% {width: 300px;}
+        50% {width: 200px;} 
+        75% {width: 300px;}
+        100% {width: 100px;}
+    }
+    
+    .animacion {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: un_efecto;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-delay: 2s;
+        animation-duration: 3s;
     }
 
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    h1 {
+        animation-duration: 5s;
+        animation-name: aparecer;
+        animation-delay: 1s;
+    }
     .color_titulo {
-        background-color: #b35900;
-        color: black;
+       background-color: #000;
+        color: white;
+        display: flex;
+        align-items: center;
     }
 
     .color_fuente {
@@ -218,6 +251,8 @@
         padding: 10px 20px;
         border-radius: 16px;
         font-size: 15px;
+        display: flex;
+        align-items: center;
     }
 
     #imagen {
